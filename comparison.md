@@ -22,51 +22,28 @@
 
 ## Introduction
 
-Deployment strategies are essential for smoothly delivering software updates to production environments. Choosing the right strategy helps reduce system downtime, manage risk effectively, and improve end-user satisfaction.
+Deployment strategies are ways to update software in a live (production) environment. Choosing the right strategy helps avoid system downtime, reduces risk, and keeps users happy.
 
-This document outlines key deployment strategies with a detailed comparison and recommends the most suitable approach for projects aiming for balance between availability, risk, cost, and automation.
-
----
-
-## What is Deployment Strategies
-
-Deployment strategies define how new code is released to users. These strategies influence factors like service continuity, resource consumption, risk tolerance, and rollback procedures.
-
-They are a crucial part of modern DevOps workflows and continuous delivery pipelines.
+This document explains some common deployment methods and helps you pick the best one based on availability, risk, cost, and automation needs.
 
 ---
+
+## What are Deployment Strategies?
+
+Deployment strategies are plans for how to release new software to users. They affect how smoothly the service runs during updates, how much it costs, how risky the update is, and how easy it is to go back if something goes wrong.
+
+They are an important part of modern software development and delivery.
+
 
 ## Deployment Strategy Types
 
-### 1. Recreate Deployment
-
-- **Description:** Completely shuts down the current version before deploying the new one.
-- **Pros:** Simple and easy to execute.
-- **Cons:** Causes downtime; risky if the new version fails.
-
-### 2. Rolling Deployment
-
-- **Description:** Gradually replaces old version pods or instances with the new ones.
-- **Pros:** Minimizes downtime; easy rollback.
-- **Cons:** Slower rollout; requires monitoring during the process.
-
-### 3. Blue-Green Deployment
-
-- **Description:** Maintains two identical environments (blue & green). New version goes to green; traffic is shifted once verified.
-- **Pros:** Zero downtime; immediate rollback.
-- **Cons:** High infrastructure cost; needs good orchestration.
-
-### 4. Canary Deployment
-
-- **Description:** Deploys the new version to a small subset of users initially. Gradually increases exposure.
-- **Pros:** Risk is controlled; real user feedback possible.
-- **Cons:** Requires metrics and monitoring; complex routing.
-
-### 5. A/B Testing Deployment
-
-- **Description:** Different versions are served to different user segments to analyze performance or behavior.
-- **Pros:** Effective for experimentation and product decisions.
-- **Cons:** Complex setup; needs traffic control and analysis.
+| Deployment Strategy     | Description                                                                 | Pros                                              | Cons                                                    |
+|-------------------------|-----------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------|
+| Recreate Deployment     | Completely shuts down the current version before deploying the new one.     | Simple and easy to execute                        | Causes downtime; risky if the new version fails        |
+| Rolling Deployment      | Gradually replaces old version pods or instances with the new ones.         | Minimizes downtime; easy rollback                 | Slower rollout; requires monitoring during the process  |
+| Blue-Green Deployment   | Maintains two identical environments (blue & green). New version goes to green; traffic is shifted once verified. | Zero downtime; immediate rollback                 | High infrastructure cost; needs good orchestration     |
+| Canary Deployment       | Deploys the new version to a small subset of users initially. Gradually increases exposure. | Risk is controlled; real user feedback possible   | Requires metrics and monitoring; complex routing        |
+| A/B Testing Deployment  | Different versions are served to different user segments to analyze performance or behavior. | Effective for experimentation and product decisions | Complex setup; needs traffic control and analysis     |
 
 ---
 
