@@ -66,15 +66,15 @@ They are an important part of modern software development and delivery.
 
 ## Conclusion and Recommendation
 
-### ✅ **Recommended Strategy: Rolling Deployment**
+###  **Recommended Strategy: Rolling Deployment**
 
 Based on the comparison and project requirements, **Rolling Deployment** is the most balanced strategy offering:
 
-- ✅ **Low downtime** with gradual deployment.
-- ✅ **Simple rollback** as changes are incremental.
-- ✅ **Resource efficiency**, unlike Blue-Green which doubles resources.
-- ✅ **Great user experience** with uninterrupted service.
-- ✅ **Moderate complexity**, easier to adopt and automate.
+-  **Low downtime** with gradual deployment.
+-  **Simple rollback** as changes are incremental.
+-  **Resource efficiency**, unlike Blue-Green which doubles resources.
+-  **Great user experience** with uninterrupted service.
+-  **Moderate complexity**, easier to adopt and automate.
 
 > #### **Rolling Deployment** is a good balance of **easy setup**, **low risk**, and **low cost** — perfect for teams with limited resources but need high system uptime.
 >
